@@ -1,0 +1,38 @@
+{
+    "name": "chat-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon --inspect src/server.js -e js",
+        "sass": "sass -w --no-source-map --color src/resources/styles:src/public/styles"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@socket.io/redis-adapter": "^7.2.0",
+        "bad-words": "^3.0.4",
+        "bcrypt": "^5.0.1",
+        "connect-redis": "^6.1.3",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "express-handlebars": "^6.0.6",
+        "express-session": "^1.17.3",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.3.3",
+        "morgan": "^1.10.0",
+        "passport": "^0.5.3",
+        "passport-google-oauth20": "^2.0.0",
+        "passport-jwt": "^4.0.0",
+        "redis": "^4.1.0",
+        "sass": "^1.51.0",
+        "socket.io": "^4.5.0",
+        "winston": "^3.7.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    }
+}

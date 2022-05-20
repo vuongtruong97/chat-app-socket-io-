@@ -1,0 +1,30 @@
+<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
+    <a class='navbar-brand' href='/'>Home</a>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav mr-auto'>
+            <li class='nav-item active'>
+                <a class='nav-link' href='/users/register'>Register<span class='sr-only'>(current)</span></a>
+            </li>
+
+        </ul>
+        {{#if email}}
+            <div class='user' style='color: #fff'>
+                <div class='dropdown'>
+                    <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        {{email}}
+                    </button>
+                    <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
+                        <a class='dropdown-item' href='/users/logout'>Logout<span class='sr-only'>(current)</span></a>
+
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <a class='btn btn-outline-success' href='/users/login'>Login<span class='sr-only'>(current)</span></a>
+        {{/if}}
+    </div>
+</nav>

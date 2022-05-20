@@ -1,0 +1,56 @@
+{{! <div class='row'>
+    <div class='col-6'>
+        <form action='/users/login' method='POST'>
+            <input name='email' type='email' />
+            <input name='password' type='password' />
+            <input type='submit' value='Login' />
+        </form>
+    </div>
+</div> }}
+<div class='row'>
+    <div class='col-md-5 mx-auto'>
+        <div class='myform form border border-primary rounded mt-5'>
+            <div class='logo mb-3'>
+                <div class='col-md-12 text-center'>
+                    <h1>Login</h1>
+                </div>
+            </div>
+            <form action='/users/login' method='POST'>
+                <div class='form-group'>
+                    <label for='email'>Email address</label>
+                    <input type='email' name='email' class='form-control' id='email' placeholder='Enter email' />
+                </div>
+                <div class='form-group'>
+                    <label for='exampleInputEmail1'>Password</label>
+                    <input type='password' name='password' id='password' class='form-control' placeholder='Enter Password' />
+                </div>
+                <span class='text-danger'>{{error}}</span>
+
+                <div class='form-group'>
+                    <p class='text-center'>By signing up you accept our <a href='#'>Terms Of Use</a></p>
+                </div>
+                <div class='col-md-12 text-center'>
+                    <button type='submit' class='btn btn-block mybtn btn-primary tx-tfm'>Login</button>
+                </div>
+                <div class='col-md-12'>
+                    <div class='login-or'>
+                        <hr class='hr-or' />
+                    </div>
+                </div>
+                <div class='col-md-12 mb-3'>
+                    <p class='text-center'>
+                        <a href='/oauth/google' class='google btn mybtn'>
+                            <i class='fa-brands fa-google-plus-g'></i>
+                            Signup using Google
+                        </a>
+                    </p>
+                </div>
+                <div class='form-group'>
+                    <p class='text-center'>Don't have account? <a href='/users/register' id='signup'>Sign up here</a></p>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>

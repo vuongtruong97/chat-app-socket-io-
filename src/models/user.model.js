@@ -24,6 +24,8 @@ const userSchema = new Schema(
         googleId: { type: String },
         avatar: { type: String },
         googleRefreshToken: { type: String },
+        resetToken: { type: String },
+        resetTokenExpiration: { type: String },
     },
     { timestamp: true }
 )

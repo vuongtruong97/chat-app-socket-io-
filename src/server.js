@@ -11,6 +11,7 @@ const path = require('path')
 const passport = require('passport')
 const morgan = require('morgan')
 const raw = require('./utils/hbs.helper')
+const methodOverride = require('method-override')
 
 const configRouter = require('./routes/routes')
 const { connectDb, redisClient, subClient, createRedisConnect } = require('./db/db')
@@ -38,6 +39,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser())
 app.use(morgan('combined'))
+app.use(methodOverride('_method'))
 
 //Configure session middleware
 app.use(

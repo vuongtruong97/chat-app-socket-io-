@@ -1,0 +1,29 @@
+<div class='container'>
+    <div class='row d-flex justify-content-center mt-5 mb-5'>
+        <div class='col-11 col-md-9 col-sm-11'>
+            <form action='/users/reset-password' method='post'>
+                <div class='form-group'>
+                    <h3>Forgot password</h3>
+                    <label for='email'>Email</label>
+                    <input name='email' type='email' class='form-control' id='email' placeholder='Email' required />
+                    <p class='text-danger pl-2 mt-2 font-weight-light'>{{message}}</p>
+                </div>
+                <button type='submit' class='btn btn-primary btn-block'>Send</button>
+            </form>
+            <a class='btn btn-outline-success btn-block mt-3' href='/users/login' role='button'>Try another account</a>
+
+        </div>
+    </div>
+</div>
+{{! prettier-ignore }}
+<script>
+    const message = document.querySelector('.text-danger')
+    const input = document.querySelector('#email')
+
+    input.oninput = () => {
+        console.log('inot')
+        if(message) {
+            message.style.visibility = 'hidden'
+        }
+    }
+</script>

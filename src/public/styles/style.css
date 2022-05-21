@@ -237,6 +237,7 @@ html {
 
   .mess_input {
     flex-grow: 0;
+    padding: 0 10px !important;
     width: 100px;
   }
 

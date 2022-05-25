@@ -1,5 +1,6 @@
 const { CODE_VERIFIER, ZALO_ID, ZALO_REDIRECT_URI, ZALO_CODE_CHALLENGE, STATE } = process.env
 
-const zaloUrl = `https://oauth.zaloapp.com/v4/permission?app_id=${ZALO_ID}&redirect_uri=${ZALO_REDIRECT_URI}&code_challenge=${ZALO_CODE_CHALLENGE}&state=${STATE}`
+// const zaloUrl = `https://oauth.zaloapp.com/v4/permission?app_id=${ZALO_ID}&redirect_uri=${ZALO_REDIRECT_URI}&code_challenge=${ZALO_CODE_CHALLENGE}&state=${STATE}`
+const zaloUrl='https://oauth.zaloapp.com/v4/oa/permission?app_id=1755876041930040542&redirect_uri=https%3A%2F%2Fvuong-chat-app.herokuapp.com%2Foauth%2Fzalo%2Fredirect&code_challenge=Ww13Z9npiCTigGbPI-WrIi7wqk.tdwuvp1mEFyJRd-VrTalIaD9HoFMEq2A93aiVPIS1dzIivTibhF7TD5qxnq-~hSeRqkEjtAuzDcbX5ahszZKMTc6ydR1S-nPh1KDd'
 
 module.exports = zaloUrl

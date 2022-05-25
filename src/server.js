@@ -30,7 +30,7 @@ connectDb()
 createRedisConnect()
 
 // define paths and consts
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 1997
 const publicDirectoryPath = path.join(__dirname, './public')
 const viewPath = path.join(__dirname, './views')
 

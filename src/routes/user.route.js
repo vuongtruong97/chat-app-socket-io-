@@ -46,8 +46,7 @@ userRouter.post('/reset-password', async (req, res) => {
     const token = uuidv4()
     user.resetToken = token
     user.resetTokenExpiration = Date.now() + 3_600_000
-
-    const urlReset = `http://localhost:3000/users/reset-password/${token}`
+    const urlReset = ` https://vuong-chat-app.herokuapp.com/users/reset-password/${token}`
     const mailer = new Email(user, urlReset)
 
     await user.save()
